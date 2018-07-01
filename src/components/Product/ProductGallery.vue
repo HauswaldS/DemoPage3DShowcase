@@ -150,8 +150,19 @@
         position: absolute;
         top: 10px;
         left: 10px;
+        border-bottom: 4px solid rgba(50, 123, 197, 1);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-top:1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        background: rgba(64, 158, 255, 1);
+        transition: ease-in .2s;
     }
 
+    .product-gallery-container .el-button:focus {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-top: 4px solid rgba(0, 0, 0, 0.2);
+    }
 
     /*SM*/
     @media all and (min-width: 768px) {

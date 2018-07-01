@@ -15,10 +15,10 @@
                                 :class="{'configuration-selected': isSelected(configuration), 'configuration-not-available': !isAvailable(configuration)}"
                                 v-for="configuration in  configurationType.configurations"
                                 :key="configuration.label">
-                            <el-tooltip class="item" effect="light" :content="configuration.label" placement="top">
-                                <img v-if="configuration.image" :src="configuration.image" alt="">
-                                <p v-else> {{configuration.label}}</p>
-                            </el-tooltip>
+                            <img :title="configuration.label"
+                                 v-tippy="{ placement : 'top',  arrow: true }"
+                                 v-if="configuration.image" :src="configuration.image" alt="">
+                            <p v-else> {{configuration.label}}</p>
                         </el-col>
                     </el-row>
                 </el-container>
