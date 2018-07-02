@@ -14,9 +14,9 @@
                     <h2 v-if="product.subtitle"> {{product.subtitle}}</h2>
                 </template>
             </el-col>
-            <el-col :span="24" class="product-informations-container hidden-xs-only">
+            <el-col :span="24" class="product-informations-container">
                 <el-row type="flex">
-                    <el-col :xs="24" class="breadcrumb-container">
+                    <el-col :xs="24" class="breadcrumb-container  hidden-xs-only">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
                             <el-breadcrumb-item>Acceuil</el-breadcrumb-item>
                             <el-breadcrumb-item>Produits</el-breadcrumb-item>
@@ -209,10 +209,12 @@
     }
 
     .product-informations-container {
+        display: flex;
+        justify-content: center;
         margin: 0 auto;
         max-width: 1600px;
-        min-height: 80vh;
-        padding-top: 2rem;
+        height: 80vh;
+        max-height: 1000px;
     }
 
     .product-configurator-container {
@@ -267,9 +269,6 @@
     }
 
     @media all and (min-width: 768px) {
-        .product-informations-container {
-            padding-top: 4rem;
-        }
 
         .product-configurator-container {
             margin-top: 0;

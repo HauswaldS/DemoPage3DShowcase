@@ -1,10 +1,10 @@
 <template>
     <div class="hero-image-container" :style="{backgroundImage: `url(${image})`}">
         <div class="title-container" data-aos="slide-right" data-aos-duration="1500" data-aos-once="true">
-            <div>
-                <h1 v-if="title" class="hidden-xs-only"> {{title}}</h1>
-                <hr class="hidden-xs-only">
-                <h2 v-if="subtitle" class="hidden-xs-only"> {{subtitle}}</h2>
+            <div class="hidden-xs-only">
+                <h1 v-if="title"> {{title}}</h1>
+                <hr>
+                <h2 v-if="subtitle"> {{subtitle}}</h2>
             </div>
         </div>
     </div>
@@ -67,6 +67,10 @@
         margin-bottom: 0;
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-image-container .title-container div {
+        display: none;
     }
 
     @media all and (min-width: 768px) {
